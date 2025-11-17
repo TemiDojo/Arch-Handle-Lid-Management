@@ -1,1 +1,1 @@
-# Arch-Handle-Lid-Manager
+# Arch-Handle-Lid-Manager for Framework Laptop
