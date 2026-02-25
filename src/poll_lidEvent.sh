@@ -3,7 +3,7 @@
 
 journalctl -f -u systemd-logind | grep --line-buffered "Lid" | while read -r line; do
     #echo $line
-    my_status=$(echo $line | awk '{printf $7}')
+    my_status=$(echo $line | awk '{print $7}')
     #echo "$my_status"
     output_list=$(swaymsg -t get_outputs | jq '[.[].name | select(. != "eDP-1")] | length')
     laptop_display_status=$(swaymsg -t get_outputs | jq -r '.[] | select(.name=="eDP-1") | .dpms')
